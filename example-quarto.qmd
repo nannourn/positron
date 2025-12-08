@@ -10,8 +10,10 @@ author:
         - name: Ecology, Evolution & Behavior Program
 date: last-modified
 format: html
-toc: true
 fontsize: 0.9em
+code-tools: true
+code-link: true
+toc: true
 brand: _brand.yml
 ---
 
@@ -19,12 +21,28 @@ brand: _brand.yml
 
 Let's create a Quarto document detailing all the ways we know how to run simple models to full Bayaesian hierarchical models with various R packages.
 
+## Packages and Set Up
+
+We load all the packages that we will be using. We'll be fitting our statistical models with the Stan, JAGS and NIMBLE coding languages.
+
+```{r}
+#| label: packages
+#| message: false
+library(rstan); library(jagsUI); library(nimble)
+library(sf); library(tmap)
+library(tidyverse); library(tidybayes)
+library(here)
+here()
+theme_set(theme_minimal())
+options(scipen = 10^2)
+```
+
 # Data Simulation
 
 We simulate the data generating process to help us understand our models.
 
 ```{r}
-#| title: data-simulation
+#| label: data-sim
 n <- 500
 data_sim <- rnorm(n, 0 , 1)
 hist(data_sim)

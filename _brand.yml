@@ -8,3 +8,15 @@ color:
 
 logo: 
   medium: logo.png
+
+typography:
+  fonts:
+    - family: Montserrat
+    - family: Fira Code
+    - family: Coral Pixels
+      source: google
+  base: Montserrat
+  headings: Coral Pixels
+  monospace-block:  Fira Code
+  monospace-inline: Fira Code
+  link: Montserrat
