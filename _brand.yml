@@ -1,0 +1,18 @@
+color:
+  palette:
+    kelly-green: "#008208"
+    spartan-green: "#18453B"
+  background: white
+  foreground: spartan-green
+  primary: kelly-green
+
+logo: 
+  medium: logo.png
+
+typography:
+  fonts:
+    - family: Helvetica
+      source: google
+  base: Helvetica
+  monospace-inline: Fira Code
+  monospace-block: Fira Code
