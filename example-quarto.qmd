@@ -10,18 +10,21 @@ author:
         - name: Ecology, Evolution & Behavior Program
 date: last-modified
 format: html
-brand: _brand.yml
 toc: true
+fontsize: 0.9em
+brand: _brand.yml
 ---
+
 # Introduction
 
-Okay, let's create a Quarto document detailing how we can run simple models to running full Bayaesian hierarchical models with various packages. 
+Let's create a Quarto document detailing all the ways we know how to run simple models to full Bayaesian hierarchical models with various R packages.
 
 # Data Simulation
 
-We make simulate the data generating process to help us understand our models.
+We simulate the data generating process to help us understand our models.
 
 ```{r}
+#| title: data-simulation
 n <- 500
 data_sim <- rnorm(n, 0 , 1)
 hist(data_sim)

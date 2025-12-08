@@ -8,11 +8,3 @@ color:
 
 logo: 
   medium: logo.png
-
-typography:
-  fonts:
-    - family: Helvetica
-      source: google
-  base: Helvetica
-  monospace-inline: Fira Code
-  monospace-block: Fira Code
