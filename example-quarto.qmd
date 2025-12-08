@@ -1,0 +1,30 @@
+---
+title: "Quarto Example"
+author:
+    - name: Nan Nourn
+      email: nan@msu.edu
+      orcid: 0000-0001-5057-0640
+      affiliations:
+        - name: Michigan State University
+        - name: Department of Fisheries & Wildlife
+        - name: Ecology, Evolution & Behavior Program
+date: last-modified
+format: html
+theme: "yeti"
+toc: true
+---
+# Introduction
+
+Okay, let's create a Quarto document detailing how we can run simple models to running full Bayaesian hierarchical models with various packages. 
+
+# Data Simulation
+
+# GLMMs
+
+# JAGS
+
+# Stan
+
+# Nimble
+
+# Discussion
