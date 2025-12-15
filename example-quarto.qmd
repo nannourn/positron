@@ -37,18 +37,37 @@ theme_set(theme_minimal())
 options(scipen = 10^2)
 ```
 
-# Data Simulation
+# Linear Regression
 
-We simulate the data generating process to help us understand our models.
+## Model of the mean & Normal linear regression
+
+$$
+y_i \sim Normal(\mu, \sigma^2)
+$$
+
+$$
+\mu_i = \alpha + \beta \cdot x_i
+$$
+
+### Data generation
+
+Here we simulate wallcrepper data: 
 
 ```{r}
-#| label: data-sim
-n <- 500
-data_sim <- rnorm(n, 0 , 1)
-hist(data_sim)
-```
+set.seed(5)
+n <- 16      # number of years
+a <- 40      # intercept
+b <- 0.5     # slope
+sigma2 <- 25 # residual variance
+truth <- tibble(alpha = a, beta = b, sigma = sqrt(sigma2))
 
-# GLMMs
+# data and plot
+wallcreeper <- tibble(x = 1:n, eps = rnorm(n, mean = 0, sd = sqrt(sigma2)), y = a + b * x + eps)
+wallcreeper |> 
+  ggplot(aes(x = x, y = y)) +
+  geom_point() +
+  geom_line()
+```
 
 # JAGS
 

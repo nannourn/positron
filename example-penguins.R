@@ -1,7 +1,8 @@
 # coded by: Nan Nourn
 # date: 2025-12-07
+# purpose: to show common data science and coding principles in R with new Positron IDE
 
-# packages
+# load packages
 library(tidyverse)
 library(palmerpenguins)
 library(here)
@@ -14,11 +15,10 @@ penguins <- penguins |> drop_na()
 
 # simple graphs
 # compare mass between species
-penguins |> 
+penguins |>
   ggplot(aes(x = body_mass_g, fill = species)) +
   geom_density(alpha = 0.7)
 # compare flipper length between sex
-penguins |> 
+penguins |>
   ggplot(aes(x = flipper_length_mm, fill = sex)) +
   geom_histogram(alpha = 0.5)
-
